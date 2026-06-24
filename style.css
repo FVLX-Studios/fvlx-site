@@ -67,7 +67,7 @@ main, .nav, .footer { max-width: 1080px; margin: 0 auto; padding-left: 1.5rem; p
 .nav nav { grid-column: 3; justify-self: end; }
 .logo:hover { transform: translateY(-1px); }
 .logo-img {
-  height: 64px;
+  height: 80px;
   width: auto;
   display: block;
 }
