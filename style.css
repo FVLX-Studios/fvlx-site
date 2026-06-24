@@ -50,6 +50,49 @@ img { display: block; max-width: 100%; }
   padding-bottom: 0.65rem;
   border-bottom: 1px solid rgba(255,255,255,0.07);
 }
+/* Main nav gracefully steps aside for the floating sub-nav */
+.nav { transition: background 0.4s var(--ease), backdrop-filter 0.4s var(--ease), padding 0.4s var(--ease), opacity 0.45s var(--ease), transform 0.45s var(--ease); }
+.nav.nav-hide { opacity: 0; transform: translateY(-100%); pointer-events: none; }
+
+/* ===== FLOATING STICKY SUB-NAV (Apple product-bar style) ===== */
+.subnav {
+  position: fixed;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-24px);
+  z-index: 120;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  width: min(700px, calc(100% - 1.5rem));
+  padding: 0.5rem 0.5rem 0.5rem 1.4rem;
+  background: rgba(10, 10, 15, 0.6);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  box-shadow: 0 12px 40px -14px rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
+}
+.subnav.show { opacity: 1; transform: translateX(-50%) translateY(0); pointer-events: auto; }
+.subnav-brand { font-weight: 500; font-size: 1.02rem; letter-spacing: -0.01em; color: #fff; white-space: nowrap; }
+.subnav-actions { display: flex; gap: 0.5rem; }
+.pill { padding: 0.55rem 1.2rem; border-radius: 999px; font-size: 0.9rem; font-weight: 600; text-decoration: none; white-space: nowrap; transition: transform 0.25s var(--ease), background 0.25s var(--ease), border-color 0.25s var(--ease), box-shadow 0.25s var(--ease); }
+.pill-ghost { color: #fff; border: 1px solid rgba(255, 255, 255, 0.32); }
+.pill-ghost:hover { background: rgba(255, 255, 255, 0.08); border-color: #fff; }
+.pill-blue { background: var(--blue); color: #fff; border: 1px solid var(--blue); }
+.pill-blue:hover { transform: translateY(-1px); box-shadow: 0 10px 26px -8px rgba(59, 130, 246, 0.8); }
+@media (max-width: 520px) {
+  .subnav { gap: 0.75rem; padding-left: 1.1rem; }
+  .subnav-brand { font-size: 0.92rem; }
+  .pill { padding: 0.5rem 0.95rem; font-size: 0.82rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .subnav { transition: opacity 0.3s linear; }
+}
 .nav-logo-img { height: 34px; width: auto; filter: invert(1) brightness(2); }
 .nav-links { display: flex; align-items: center; gap: clamp(1rem, 2.5vw, 2.2rem); }
 .nav-links a { text-decoration: none; color: rgba(255,255,255,0.78); font-size: 0.95rem; font-weight: 500; transition: color 0.25s; }

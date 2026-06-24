@@ -7,11 +7,24 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-/* ---- Nav background on scroll ---- */
+/* ---- Nav background + floating sub-nav on scroll ---- */
 const nav = document.getElementById("nav");
-const onNavScroll = () => nav.classList.toggle("scrolled", window.scrollY > 40);
+const subnav = document.getElementById("subnav");
+const hero = document.querySelector(".hero");
+
+function onNavScroll() {
+  const y = window.scrollY;
+  nav.classList.toggle("scrolled", y > 40);
+  // Reveal the floating sub-nav once we've scrolled past most of the hero,
+  // and step the main nav aside so they don't stack.
+  const past = y > hero.offsetHeight - 120;
+  subnav.classList.toggle("show", past);
+  subnav.setAttribute("aria-hidden", past ? "false" : "true");
+  nav.classList.toggle("nav-hide", past);
+}
 onNavScroll();
 window.addEventListener("scroll", onNavScroll, { passive: true });
+window.addEventListener("resize", onNavScroll, { passive: true });
 
 /* ---- Testimonial carousel (works regardless of motion pref) ---- */
 (function carousel() {
