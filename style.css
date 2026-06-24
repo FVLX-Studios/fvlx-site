@@ -65,7 +65,7 @@ main, .nav, .footer { max-width: 1080px; margin: 0 auto; padding-left: 1.5rem; p
 }
 .logo:hover { transform: translateY(-1px); }
 .logo-img {
-  height: 44px;
+  height: 64px;
   width: auto;
   display: block;
 }
