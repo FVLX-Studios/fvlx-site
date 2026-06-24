@@ -58,13 +58,17 @@ main, .nav, .footer { max-width: 1080px; margin: 0 auto; padding-left: 1.5rem; p
 }
 .nav > * { max-width: 1080px; }
 .logo {
-  font-weight: 800;
-  font-size: 1.25rem;
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
-  color: var(--ink);
-  letter-spacing: -0.02em;
+  transition: transform 0.2s;
 }
-.logo span { color: var(--accent); }
+.logo:hover { transform: translateY(-1px); }
+.logo-img {
+  height: 44px;
+  width: auto;
+  display: block;
+}
 .nav nav { display: flex; align-items: center; gap: 1.75rem; }
 .nav nav a { text-decoration: none; color: var(--muted); font-weight: 500; transition: color 0.2s; }
 .nav nav a:hover { color: var(--ink); }
