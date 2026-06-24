@@ -10,24 +10,34 @@ const canHover = window.matchMedia("(hover: hover)").matches;
 const hasGSAP = typeof gsap !== "undefined";
 
 /* ---------- Recursive character splitter (preserves <em> etc.) ---------- */
-function splitChars(node) {
+function splitNodes(node) {
   const out = [];
   node.childNodes.forEach((child) => {
     if (child.nodeType === 3) {
-      child.textContent.split("").forEach((ch) => {
-        if (ch === " ") { out.push(document.createTextNode(" ")); }
-        else { const s = document.createElement("span"); s.className = "char"; s.textContent = ch; out.push(s); }
+      // Split on whitespace, keep spaces; wrap each WORD so it can't break mid-word.
+      child.textContent.split(/(\s+)/).forEach((part) => {
+        if (part === "") return;
+        if (/^\s+$/.test(part)) { out.push(document.createTextNode(part)); return; }
+        const word = document.createElement("span");
+        word.className = "word";
+        part.split("").forEach((ch) => {
+          const c = document.createElement("span");
+          c.className = "char";
+          c.textContent = ch;
+          word.appendChild(c);
+        });
+        out.push(word);
       });
     } else if (child.nodeType === 1) {
       const clone = child.cloneNode(false);
-      splitChars(child).forEach((n) => clone.appendChild(n));
+      splitNodes(child).forEach((n) => clone.appendChild(n));
       out.push(clone);
     }
   });
   return out;
 }
 function splitInto(el) {
-  const frag = splitChars(el);
+  const frag = splitNodes(el);
   el.textContent = "";
   frag.forEach((n) => el.appendChild(n));
   return el.querySelectorAll(".char");
