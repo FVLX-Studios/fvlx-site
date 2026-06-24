@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Northwind — Project management, finally calm</title>
+  <meta name="description" content="Northwind is the project management tool that keeps your team aligned, on time, and stress-free.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+  <header class="nav" id="nav">
+    <a href="#top" class="brand"><span class="brand-mark"></span>Northwind</a>
+    <nav class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#testimonials">Customers</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#" class="ghost">Sign in</a>
+      <a href="#pricing" class="solid">Start free</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-copy reveal">
+        <span class="pill">✨ New — AI sprint planning</span>
+        <h1>Project management,<br>finally <span class="grad">calm.</span></h1>
+        <p>Northwind keeps every task, timeline, and teammate in sync — so work moves forward without the chaos. Plan less, ship more.</p>
+        <div class="hero-actions">
+          <a href="#pricing" class="solid lg">Start free — no card</a>
+          <a href="#features" class="ghost lg">See how it works →</a>
+        </div>
+        <div class="hero-trust">
+          <span>Trusted by 4,000+ teams</span>
+          <div class="logos"><span>Acme</span><span>Vela</span><span>Orbit</span><span>Nimbus</span><span>Lumen</span></div>
+        </div>
+      </div>
+      <!-- SWAP: replace .dashboard with a real product screenshot -->
+      <div class="hero-visual reveal-pop">
+        <div class="dashboard">
+          <div class="dash-bar"><span></span><span></span><span></span></div>
+          <div class="dash-body">
+            <aside class="dash-side">
+              <span class="ds-logo"></span>
+              <span class="ds-item active"></span><span class="ds-item"></span><span class="ds-item"></span><span class="ds-item"></span>
+            </aside>
+            <div class="dash-main">
+              <div class="dash-row"><span class="chip">In progress</span><span class="dash-h"></span></div>
+              <div class="dash-cards">
+                <div class="dcard"><span class="dc-tag t1">Design</span><span class="dc-line"></span><span class="dc-line s"></span><span class="dc-foot"><i></i><i></i></span></div>
+                <div class="dcard"><span class="dc-tag t2">Dev</span><span class="dc-line"></span><span class="dc-line s"></span><span class="dc-foot"><i></i></span></div>
+                <div class="dcard"><span class="dc-tag t3">QA</span><span class="dc-line"></span><span class="dc-line s"></span><span class="dc-foot"><i></i><i></i></span></div>
+              </div>
+              <div class="dash-chart"><span style="--h:40%"></span><span style="--h:65%"></span><span style="--h:50%"></span><span style="--h:80%"></span><span style="--h:60%"></span><span style="--h:95%"></span><span style="--h:72%"></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="float-card fc1">✓ Sprint shipped</div>
+        <div class="float-card fc2">↑ 32% faster delivery</div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features" id="features">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Everything in one place</span>
+        <h2>The calm command center for your whole team</h2>
+      </div>
+      <div class="feat-grid">
+        <article class="feat reveal"><div class="fi">◳</div><h3>Boards &amp; timelines</h3><p>Kanban, lists, and Gantt timelines that update in real time as your team moves.</p></article>
+        <article class="feat reveal"><div class="fi">⚡</div><h3>AI sprint planning</h3><p>Auto-balance workloads and forecast delivery dates with one click.</p></article>
+        <article class="feat reveal"><div class="fi">⟳</div><h3>Automations</h3><p>Route tasks, send reminders, and update statuses without lifting a finger.</p></article>
+        <article class="feat reveal"><div class="fi">◇</div><h3>Docs &amp; wikis</h3><p>Specs, notes, and knowledge live right next to the work they describe.</p></article>
+        <article class="feat reveal"><div class="fi">▤</div><h3>Dashboards</h3><p>Real-time insights into velocity, blockers, and team capacity.</p></article>
+        <article class="feat reveal"><div class="fi">⚿</div><h3>Enterprise security</h3><p>SSO, SCIM, audit logs, and SOC 2 Type II compliance out of the box.</p></article>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="pricing" id="pricing">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Simple pricing</span>
+        <h2>Plans that scale with you</h2>
+      </div>
+      <div class="price-grid">
+        <article class="plan reveal">
+          <h3>Starter</h3><p class="plan-sub">For small teams getting organized.</p>
+          <div class="amount"><span class="cur">$</span>0<span class="per">/mo</span></div>
+          <ul><li>Up to 10 members</li><li>Unlimited tasks</li><li>Boards &amp; lists</li><li>Community support</li></ul>
+          <a href="#" class="ghost full">Get started</a>
+        </article>
+        <article class="plan featured reveal">
+          <span class="badge">Most popular</span>
+          <h3>Pro</h3><p class="plan-sub">For growing teams that ship fast.</p>
+          <div class="amount"><span class="cur">$</span>12<span class="per">/user / mo</span></div>
+          <ul><li>Everything in Starter</li><li>AI sprint planning</li><li>Automations &amp; timelines</li><li>Dashboards &amp; reporting</li><li>Priority support</li></ul>
+          <a href="#" class="solid full">Start free trial</a>
+        </article>
+        <article class="plan reveal">
+          <h3>Enterprise</h3><p class="plan-sub">For organizations at scale.</p>
+          <div class="amount">Custom</div>
+          <ul><li>Everything in Pro</li><li>SSO &amp; SCIM</li><li>Audit logs &amp; SOC 2</li><li>Dedicated manager</li></ul>
+          <a href="#" class="ghost full">Contact sales</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials" id="testimonials">
+      <div class="sec-head reveal"><span class="eyebrow">Loved by teams</span><h2>Don't take our word for it</h2></div>
+      <div class="quote-grid">
+        <figure class="quote reveal"><blockquote>“We cut our planning meetings in half. Northwind just keeps everyone aligned.”</blockquote><figcaption><span class="ava a1"></span><div><strong>Dana Whitfield</strong><span>Head of Product, Vela</span></div></figcaption></figure>
+        <figure class="quote reveal"><blockquote>“The AI sprint planning is genuinely magic. It's like having a project manager built in.”</blockquote><figcaption><span class="ava a2"></span><div><strong>Marcus Lee</strong><span>Eng Lead, Orbit</span></div></figcaption></figure>
+        <figure class="quote reveal"><blockquote>“We onboarded 60 people in a week. It's the calmest our roadmap has ever been.”</blockquote><figcaption><span class="ava a3"></span><div><strong>Priya Nair</strong><span>COO, Nimbus</span></div></figcaption></figure>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+      <div class="sec-head reveal"><span class="eyebrow">FAQ</span><h2>Questions, answered</h2></div>
+      <div class="faq-list reveal">
+        <details><summary>Is there really a free plan?<span class="q-i">+</span></summary><p>Yes — Starter is free forever for up to 10 members, no credit card required.</p></details>
+        <details><summary>Can I import from other tools?<span class="q-i">+</span></summary><p>Absolutely. One-click importers for Jira, Asana, Trello, and CSV get you set up in minutes.</p></details>
+        <details><summary>How does the AI sprint planning work?<span class="q-i">+</span></summary><p>It analyzes task estimates and team capacity to auto-balance sprints and forecast realistic delivery dates.</p></details>
+        <details><summary>Is my data secure?<span class="q-i">+</span></summary><p>We're SOC 2 Type II compliant with SSO, SCIM, encryption at rest and in transit, and full audit logs.</p></details>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band">
+      <div class="reveal">
+        <h2>Bring calm to your next sprint.</h2>
+        <p>Start free in under two minutes. Your team will thank you.</p>
+        <a href="#" class="solid lg">Start free — no card</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="#top" class="brand"><span class="brand-mark"></span>Northwind</a><p>The calm command center for modern teams.</p></div>
+      <div class="footer-col"><span class="fh">Product</span><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#">Changelog</a><a href="#">Roadmap</a></div>
+      <div class="footer-col"><span class="fh">Company</span><a href="#">About</a><a href="#">Careers</a><a href="#">Blog</a><a href="#">Contact</a></div>
+      <div class="footer-col"><span class="fh">Legal</span><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Security</a><a href="#">DPA</a></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; <span id="year"></span> Northwind, Inc.</span><span>Made for teams that ship.</span></div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
