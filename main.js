@@ -53,11 +53,38 @@ function setupFilters(refresh) {
   });
 }
 
+/* Portfolio: native horizontal swipe (two-finger trackpad) + click-drag. */
+function setupPortfolioSwipe() {
+  const vp = document.querySelector(".port-viewport");
+  if (!vp) return;
+  let down = false, startX = 0, startScroll = 0, moved = false;
+
+  vp.addEventListener("pointerdown", (e) => {
+    down = true; moved = false;
+    startX = e.clientX; startScroll = vp.scrollLeft;
+    vp.classList.add("dragging");
+    try { vp.setPointerCapture(e.pointerId); } catch (_) {}
+  });
+  vp.addEventListener("pointermove", (e) => {
+    if (!down) return;
+    const dx = e.clientX - startX;
+    if (Math.abs(dx) > 4) moved = true;
+    vp.scrollLeft = startScroll - dx;
+  });
+  const end = () => { down = false; vp.classList.remove("dragging"); };
+  vp.addEventListener("pointerup", end);
+  vp.addEventListener("pointercancel", end);
+  vp.addEventListener("pointerleave", end);
+  // Swallow the click that follows a drag so cards don't navigate mid-swipe.
+  vp.addEventListener("click", (e) => { if (moved) { e.preventDefault(); e.stopPropagation(); } }, true);
+}
+
 /* If GSAP failed to load (e.g. offline), reveal everything and bail. */
 if (typeof gsap === "undefined" || reduceMotion) {
   document.querySelectorAll(".reveal-up, .hero-eyebrow, .hero-sub, .hero-actions, .story-card")
     .forEach((el) => (el.style.opacity = 1));
   setupFilters(null);
+  setupPortfolioSwipe();
 } else {
   gsap.registerPlugin(ScrollTrigger);
 
@@ -127,40 +154,18 @@ if (typeof gsap === "undefined" || reduceMotion) {
     }
   });
 
-  /* ---- 3. PORTFOLIO horizontal scroll ---- */
-  const track = document.querySelector(".port-track");
-  const portfolio = document.querySelector(".portfolio");
-  const getScrollLen = () => Math.max(0, track.scrollWidth - window.innerWidth);
+  /* ---- 3. PORTFOLIO: native horizontal swipe carousel ---- */
+  setupPortfolioSwipe();
+  setupFilters(null);
 
-  const hScroll = gsap.to(track, {
-    x: () => -getScrollLen(),
-    ease: "none",
-    scrollTrigger: {
-      trigger: portfolio,
-      start: "top top",
-      end: () => "+=" + getScrollLen(),
-      scrub: 1,
-      pin: true,
-      anticipatePin: 1,
-      invalidateOnRefresh: true,
-    },
-  });
-
-  /* Each project scales/fades in as it enters the viewport horizontally */
-  gsap.utils.toArray(".proj").forEach((p) => {
-    gsap.fromTo(p, { opacity: 0, scale: 0.9 }, {
-      opacity: 1, scale: 1, ease: "power2.out",
-      scrollTrigger: {
-        trigger: p,
-        containerAnimation: hScroll,
-        start: "left 90%",
-        end: "left 55%",
-        scrub: true,
-      },
-    });
-  });
-
-  setupFilters(() => ScrollTrigger.refresh());
+  /* Projects rise + fade in as the section enters view */
+  gsap.fromTo(".port-track .proj",
+    { opacity: 0, y: 40 },
+    {
+      opacity: 1, y: 0, duration: 0.9, ease: "power3.out", stagger: 0.08,
+      scrollTrigger: { trigger: ".portfolio", start: "top 78%" },
+    }
+  );
 
   /* ---- 4. STATS count-up ---- */
   gsap.utils.toArray(".count").forEach((el) => {
