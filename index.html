@@ -3,118 +3,188 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FVLX Studios — Web Development for Growing Brands</title>
-  <meta name="description" content="FVLX Studios designs and builds fast, modern websites for companies that want to stand out.">
+  <title>FVLX Studios — We craft the web's most beautiful experiences</title>
+  <meta name="description" content="FVLX Studios is a premium web design agency crafting cinematic, high-performance digital experiences.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Decorative background glow -->
-  <div class="bg-glow" aria-hidden="true"></div>
-
-  <header class="nav">
-    <a href="#" class="logo" aria-label="FVLX Studios home">
-      <img src="assets/fvlx-logo.png" alt="FVLX Studios" class="logo-img">
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav-logo" aria-label="FVLX Studios home">
+      <img src="assets/fvlx-logo.png" alt="FVLX Studios" class="nav-logo-img">
     </a>
-    <nav>
+    <nav class="nav-links">
+      <a href="#story">Approach</a>
+      <a href="#portfolio">Work</a>
       <a href="#services">Services</a>
-      <a href="#work">Work</a>
-      <a href="#contact" class="nav-cta">Get in touch</a>
+      <a href="#cta" class="nav-cta">Start a project</a>
     </nav>
   </header>
 
   <main>
-    <!-- HERO -->
-    <section class="hero">
-      <p class="eyebrow reveal">Web development studio</p>
-      <h1 class="reveal">We build websites that<br><span class="grad">make companies look unstoppable.</span></h1>
-      <p class="lede reveal">FVLX Studios designs and develops fast, modern, conversion-focused websites for ambitious brands. From idea to launch — done right.</p>
-      <div class="hero-actions reveal">
-        <a href="#work" class="btn btn-primary">View our work</a>
-        <a href="#contact" class="btn btn-ghost">Start a project</a>
+    <!-- 1. HERO -->
+    <section class="hero" id="hero">
+      <div class="aurora" aria-hidden="true">
+        <span class="aurora-blob a1"></span>
+        <span class="aurora-blob a2"></span>
+        <span class="aurora-blob a3"></span>
       </div>
-      <div class="stats reveal">
-        <div><strong>100%</strong><span>Custom built</span></div>
-        <div><strong>&lt;1s</strong><span>Load times</span></div>
-        <div><strong>24/7</strong><span>Support</span></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">FVLX Studios — Premium web design</p>
+        <h1 class="hero-title">
+          <span class="line">We craft the web's</span>
+          <span class="line">most <span class="blue">beautiful</span></span>
+          <span class="line">experiences.</span>
+        </h1>
+        <p class="hero-sub">Design, engineering and motion — fused into digital products that feel inevitable.</p>
+        <div class="hero-actions">
+          <a href="#cta" class="btn btn-blue">Start a project</a>
+          <a href="#portfolio" class="btn btn-outline">See our work</a>
+        </div>
+      </div>
+      <div class="scroll-hint" aria-hidden="true"><span></span>Scroll</div>
+    </section>
+
+    <!-- 2. PINNED STORY -->
+    <section class="story" id="story">
+      <div class="story-pin">
+        <p class="story-kicker">How we work</p>
+        <div class="story-stage">
+          <article class="story-card" data-step="0">
+            <span class="story-num">01</span>
+            <h2>Design</h2>
+            <p>We start with the feeling. Every pixel, grid and transition is composed to be effortless, considered and unmistakably premium.</p>
+          </article>
+          <article class="story-card" data-step="1">
+            <span class="story-num">02</span>
+            <h2>Build</h2>
+            <p>Hand-engineered front-ends that are blisteringly fast, accessible and pixel-perfect across every device and viewport.</p>
+          </article>
+          <article class="story-card" data-step="2">
+            <span class="story-num">03</span>
+            <h2>Launch</h2>
+            <p>We ship with confidence — performance budgets, analytics and motion polish — then stay on to help you scale.</p>
+          </article>
+        </div>
+        <div class="story-progress" aria-hidden="true">
+          <span class="dot" data-dot="0"></span>
+          <span class="dot" data-dot="1"></span>
+          <span class="dot" data-dot="2"></span>
+        </div>
       </div>
     </section>
 
-    <!-- SERVICES -->
-    <section id="services" class="services">
-      <h2 class="section-title reveal">What we do</h2>
-      <p class="section-sub reveal">Everything you need to get online and grow.</p>
-      <div class="card-grid">
-        <article class="card reveal">
-          <div class="card-icon">🎨</div>
-          <h3>Design</h3>
-          <p>Clean, modern interfaces tailored to your brand and built to convert visitors into customers.</p>
-        </article>
-        <article class="card reveal">
-          <div class="card-icon">⚡</div>
-          <h3>Development</h3>
-          <p>Hand-coded, lightning-fast websites that score top marks on performance and SEO.</p>
-        </article>
-        <article class="card reveal">
-          <div class="card-icon">🚀</div>
-          <h3>Launch &amp; Care</h3>
-          <p>Deployment, hosting setup, and ongoing maintenance so your site keeps running flawlessly.</p>
-        </article>
+    <!-- 3. PORTFOLIO (horizontal scroll) -->
+    <section class="portfolio" id="portfolio">
+      <div class="portfolio-head reveal-up">
+        <h2 class="section-title">Selected work</h2>
+        <div class="filters" role="tablist" aria-label="Portfolio filters">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="design">Design</button>
+          <button class="filter" data-filter="dev">Development</button>
+          <button class="filter" data-filter="brand">Branding</button>
+        </div>
+      </div>
+      <div class="port-viewport">
+        <div class="port-track">
+          <a class="proj" data-cat="design" href="#"><div class="proj-img p1"><span class="proj-tag">E-commerce</span><div class="proj-ui"></div></div><div class="proj-meta"><h3>Acme Commerce</h3><p>Design · Web</p></div></a>
+          <a class="proj" data-cat="dev" href="#"><div class="proj-img p2"><span class="proj-tag">SaaS</span><div class="proj-ui"></div></div><div class="proj-meta"><h3>Northwind Cloud</h3><p>Development</p></div></a>
+          <a class="proj" data-cat="brand" href="#"><div class="proj-img p3"><span class="proj-tag">Identity</span><div class="proj-ui"></div></div><div class="proj-meta"><h3>Lumen Studio</h3><p>Branding</p></div></a>
+          <a class="proj" data-cat="design" href="#"><div class="proj-img p4"><span class="proj-tag">Fintech</span><div class="proj-ui"></div></div><div class="proj-meta"><h3>Harbor Pay</h3><p>Design · Web</p></div></a>
+          <a class="proj" data-cat="dev" href="#"><div class="proj-img p5"><span class="proj-tag">Platform</span><div class="proj-ui"></div></div><div class="proj-meta"><h3>Vertex Labs</h3><p>Development</p></div></a>
+          <a class="proj" data-cat="brand" href="#"><div class="proj-img p6"><span class="proj-tag">Launch</span><div class="proj-ui"></div></div><div class="proj-meta"><h3>Nova Field</h3><p>Branding</p></div></a>
+        </div>
       </div>
     </section>
 
-    <!-- WORK / PROJECTS -->
-    <section id="work" class="work">
-      <h2 class="section-title reveal">Selected work</h2>
-      <p class="section-sub reveal">A few recent projects. (Placeholders — real case studies coming soon.)</p>
-      <div class="project-grid">
-        <a class="project reveal" href="#">
-          <div class="project-thumb thumb-1"><span>Project One</span></div>
-          <div class="project-meta">
-            <h3>Acme Commerce</h3>
-            <p>E-commerce · Web design &amp; build</p>
-          </div>
-        </a>
-        <a class="project reveal" href="#">
-          <div class="project-thumb thumb-2"><span>Project Two</span></div>
-          <div class="project-meta">
-            <h3>Northwind SaaS</h3>
-            <p>Landing page · Development</p>
-          </div>
-        </a>
-        <a class="project reveal" href="#">
-          <div class="project-thumb thumb-3"><span>Project Three</span></div>
-          <div class="project-meta">
-            <h3>Lumen Studio</h3>
-            <p>Portfolio · Design &amp; build</p>
-          </div>
-        </a>
-        <a class="project reveal" href="#">
-          <div class="project-thumb thumb-4"><span>Project Four</span></div>
-          <div class="project-meta">
-            <h3>Harbor Cafe</h3>
-            <p>Small business · Full site</p>
-          </div>
-        </a>
+    <!-- 4. STATS -->
+    <section class="stats" id="stats">
+      <div class="stat reveal-up">
+        <strong class="count" data-target="120" data-suffix="+">0</strong>
+        <span>Projects delivered</span>
+      </div>
+      <div class="stat reveal-up">
+        <strong class="count" data-target="60" data-suffix="+">0</strong>
+        <span>Happy clients</span>
+      </div>
+      <div class="stat reveal-up">
+        <strong class="count" data-target="98" data-suffix="">0</strong>
+        <span>Avg. Lighthouse score</span>
+      </div>
+      <div class="stat reveal-up">
+        <strong class="count" data-target="12" data-suffix="">0</strong>
+        <span>Design awards</span>
       </div>
     </section>
 
-    <!-- CONTACT / CTA -->
-    <section id="contact" class="contact">
-      <div class="contact-inner reveal">
-        <h2>Have a project in mind?</h2>
-        <p>Tell us what you're building and we'll get back to you within one business day.</p>
-        <a href="mailto:hello@fvlxstudios.com" class="btn btn-primary">hello@fvlxstudios.com</a>
+    <!-- 5. SERVICES -->
+    <section class="services" id="services">
+      <div class="services-head reveal-up">
+        <p class="kicker dark">Capabilities</p>
+        <h2 class="section-title dark">Everything, beautifully built.</h2>
+      </div>
+      <div class="svc-grid">
+        <article class="svc reveal-up"><span class="svc-i">◇</span><h3>Web Design</h3><p>Cinematic, conversion-focused interfaces tailored to your brand.</p></article>
+        <article class="svc reveal-up"><span class="svc-i">◈</span><h3>Development</h3><p>Fast, accessible, hand-coded front-ends built to scale.</p></article>
+        <article class="svc reveal-up"><span class="svc-i">◆</span><h3>Branding</h3><p>Identity systems, type and art direction with real presence.</p></article>
+        <article class="svc reveal-up"><span class="svc-i">▲</span><h3>SEO</h3><p>Technical SEO and performance that put you in front of customers.</p></article>
+        <article class="svc reveal-up"><span class="svc-i">✦</span><h3>AI Integration</h3><p>Smart features and assistants woven natively into your product.</p></article>
+        <article class="svc reveal-up"><span class="svc-i">●</span><h3>Care &amp; Growth</h3><p>Ongoing iteration, analytics and optimisation after launch.</p></article>
+      </div>
+    </section>
+
+    <!-- 6. TESTIMONIALS -->
+    <section class="testimonials" id="testimonials">
+      <h2 class="section-title reveal-up">Loved by ambitious teams.</h2>
+      <div class="tcarousel">
+        <div class="ttrack" id="ttrack">
+          <figure class="tcard"><blockquote>“FVLX delivered the most beautiful product launch we've ever shipped. Conversions jumped 40%.”</blockquote><figcaption><strong>Sarah Lin</strong><span>CEO, Acme</span></figcaption></figure>
+          <figure class="tcard"><blockquote>“The motion and polish are on another level. It genuinely feels like Apple built our site.”</blockquote><figcaption><strong>Marco Reyes</strong><span>Founder, Northwind</span></figcaption></figure>
+          <figure class="tcard"><blockquote>“Fast, thoughtful, and obsessive about detail. Our brand finally matches our ambition.”</blockquote><figcaption><strong>Aisha Khan</strong><span>CMO, Lumen</span></figcaption></figure>
+          <figure class="tcard"><blockquote>“Flawless performance and a design that turns heads. Worth every cent.”</blockquote><figcaption><strong>Tom Beckett</strong><span>VP Product, Vertex</span></figcaption></figure>
+        </div>
+        <div class="tnav">
+          <button class="tbtn" id="tprev" aria-label="Previous">‹</button>
+          <button class="tbtn" id="tnext" aria-label="Next">›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CLOSING CTA -->
+    <section class="closing" id="cta">
+      <div class="aurora" aria-hidden="true"><span class="aurora-blob a1"></span><span class="aurora-blob a2"></span></div>
+      <div class="closing-inner reveal-up">
+        <h2>Let's build something <span class="blue">beautiful.</span></h2>
+        <p>Tell us about your project — we reply within one business day.</p>
+        <a href="mailto:hello@fvlxstudios.com" class="btn btn-blue lg">Start a project</a>
       </div>
     </section>
   </main>
 
+  <!-- 8. FOOTER -->
   <footer class="footer">
-    <p>&copy; <span id="year"></span> FVLX Studios · Web development studio</p>
+    <div class="footer-top">
+      <img src="assets/fvlx-logo.png" alt="FVLX Studios" class="footer-logo">
+      <nav class="footer-links">
+        <a href="#story">Approach</a>
+        <a href="#portfolio">Work</a>
+        <a href="#services">Services</a>
+        <a href="#cta">Contact</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> FVLX Studios. All rights reserved.</p>
+      <p>Designed &amp; built in-house.</p>
+    </div>
   </footer>
 
+  <!-- GSAP + ScrollTrigger + Lenis (smooth scroll) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
