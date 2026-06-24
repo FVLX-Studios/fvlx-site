@@ -3,29 +3,115 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FVLX Studios</title>
+  <title>FVLX Studios — Web Development for Growing Brands</title>
+  <meta name="description" content="FVLX Studios designs and builds fast, modern websites for companies that want to stand out.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Decorative background glow -->
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a href="#" class="logo">FVLX<span>Studios</span></a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#contact" class="nav-cta">Get in touch</a>
+    </nav>
+  </header>
+
   <main>
+    <!-- HERO -->
     <section class="hero">
-      <h1>FVLX<span>Studios</span></h1>
-      <p class="tagline">We build things worth shipping.</p>
-      <a class="cta" href="#about">Learn more</a>
+      <p class="eyebrow reveal">Web development studio</p>
+      <h1 class="reveal">We build websites that<br><span class="grad">make companies look unstoppable.</span></h1>
+      <p class="lede reveal">FVLX Studios designs and develops fast, modern, conversion-focused websites for ambitious brands. From idea to launch — done right.</p>
+      <div class="hero-actions reveal">
+        <a href="#work" class="btn btn-primary">View our work</a>
+        <a href="#contact" class="btn btn-ghost">Start a project</a>
+      </div>
+      <div class="stats reveal">
+        <div><strong>100%</strong><span>Custom built</span></div>
+        <div><strong>&lt;1s</strong><span>Load times</span></div>
+        <div><strong>24/7</strong><span>Support</span></div>
+      </div>
     </section>
 
-    <section id="about" class="about">
-      <h2>About</h2>
-      <p>
-        This is the FVLX Studios homepage, hosted on GitHub Pages.
-        Edit <code>index.html</code> and <code>style.css</code> to make it your own.
-      </p>
+    <!-- SERVICES -->
+    <section id="services" class="services">
+      <h2 class="section-title reveal">What we do</h2>
+      <p class="section-sub reveal">Everything you need to get online and grow.</p>
+      <div class="card-grid">
+        <article class="card reveal">
+          <div class="card-icon">🎨</div>
+          <h3>Design</h3>
+          <p>Clean, modern interfaces tailored to your brand and built to convert visitors into customers.</p>
+        </article>
+        <article class="card reveal">
+          <div class="card-icon">⚡</div>
+          <h3>Development</h3>
+          <p>Hand-coded, lightning-fast websites that score top marks on performance and SEO.</p>
+        </article>
+        <article class="card reveal">
+          <div class="card-icon">🚀</div>
+          <h3>Launch &amp; Care</h3>
+          <p>Deployment, hosting setup, and ongoing maintenance so your site keeps running flawlessly.</p>
+        </article>
+      </div>
     </section>
 
-    <footer>
-      <p>&copy; <span id="year"></span> FVLX Studios</p>
-    </footer>
+    <!-- WORK / PROJECTS -->
+    <section id="work" class="work">
+      <h2 class="section-title reveal">Selected work</h2>
+      <p class="section-sub reveal">A few recent projects. (Placeholders — real case studies coming soon.)</p>
+      <div class="project-grid">
+        <a class="project reveal" href="#">
+          <div class="project-thumb thumb-1"><span>Project One</span></div>
+          <div class="project-meta">
+            <h3>Acme Commerce</h3>
+            <p>E-commerce · Web design &amp; build</p>
+          </div>
+        </a>
+        <a class="project reveal" href="#">
+          <div class="project-thumb thumb-2"><span>Project Two</span></div>
+          <div class="project-meta">
+            <h3>Northwind SaaS</h3>
+            <p>Landing page · Development</p>
+          </div>
+        </a>
+        <a class="project reveal" href="#">
+          <div class="project-thumb thumb-3"><span>Project Three</span></div>
+          <div class="project-meta">
+            <h3>Lumen Studio</h3>
+            <p>Portfolio · Design &amp; build</p>
+          </div>
+        </a>
+        <a class="project reveal" href="#">
+          <div class="project-thumb thumb-4"><span>Project Four</span></div>
+          <div class="project-meta">
+            <h3>Harbor Cafe</h3>
+            <p>Small business · Full site</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- CONTACT / CTA -->
+    <section id="contact" class="contact">
+      <div class="contact-inner reveal">
+        <h2>Have a project in mind?</h2>
+        <p>Tell us what you're building and we'll get back to you within one business day.</p>
+        <a href="mailto:hello@fvlxstudios.com" class="btn btn-primary">hello@fvlxstudios.com</a>
+      </div>
+    </section>
   </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> FVLX Studios · Web development studio</p>
+  </footer>
 
   <script src="main.js"></script>
 </body>
