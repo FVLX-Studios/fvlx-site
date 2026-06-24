@@ -77,6 +77,16 @@ function setupPortfolioSwipe() {
   vp.addEventListener("pointerleave", end);
   // Swallow the click that follows a drag so cards don't navigate mid-swipe.
   vp.addEventListener("click", (e) => { if (moved) { e.preventDefault(); e.stopPropagation(); } }, true);
+
+  // Route HORIZONTAL wheel/trackpad gestures to the carousel; let VERTICAL
+  // gestures bubble up to Lenis so the page keeps scrolling normally.
+  vp.addEventListener("wheel", (e) => {
+    if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
+      // Horizontal intent: scroll the cards natively, keep Lenis out of it.
+      e.stopPropagation();
+    }
+    // Vertical intent: do nothing -> the page scrolls as usual.
+  }, { passive: true });
 }
 
 /* If GSAP failed to load (e.g. offline), reveal everything and bail. */
