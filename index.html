@@ -3,195 +3,173 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FVLX Studios — We craft the web's most beautiful experiences</title>
-  <meta name="description" content="FVLX Studios is a premium web design agency crafting cinematic, high-performance digital experiences.">
+  <title>FVLX Studio — We make brands impossible to ignore</title>
+  <meta name="description" content="FVLX Studio is an independent design practice building brands and digital experiences that refuse to be ignored.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="top">
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-label" id="cursorLabel" aria-hidden="true">View</div>
+  <!-- Film grain -->
+  <div class="grain" aria-hidden="true"></div>
+
   <!-- NAV -->
-  <header class="nav" id="nav">
-    <a href="#hero" class="nav-logo" aria-label="FVLX Studios home">
-      <img src="assets/fvlx-logo.png" alt="FVLX Studios" class="nav-logo-img">
-    </a>
-    <nav class="nav-links">
-      <a href="#story">Approach</a>
-      <a href="#portfolio">Work</a>
-      <a href="#services">Services</a>
-      <a href="#cta" class="nav-cta">Start a project</a>
+  <header class="nav">
+    <a class="brand" href="#top" data-cursor>FVLX<sup>®</sup></a>
+    <nav class="menu mono">
+      <a href="#work" data-cursor>Work</a>
+      <a href="#services" data-cursor>Services</a>
+      <a href="#about" data-cursor>About</a>
+      <a href="#contact" class="menu-contact" data-cursor>Contact ↘</a>
     </nav>
   </header>
 
-  <!-- Apple-style floating sticky sub-nav (fades in past the hero) -->
-  <div class="subnav" id="subnav" aria-hidden="true">
-    <span class="subnav-brand">FVLX Studio</span>
-    <div class="subnav-actions">
-      <a href="#portfolio" class="pill pill-ghost">Explore</a>
-      <a href="#cta" class="pill pill-blue">Get started</a>
-    </div>
-  </div>
-
   <main>
     <!-- 1. HERO -->
-    <section class="hero" id="hero">
-      <div class="aurora" aria-hidden="true">
-        <span class="aurora-blob a1"></span>
-        <span class="aurora-blob a2"></span>
-        <span class="aurora-blob a3"></span>
+    <section class="hero">
+      <div class="hero-meta mono">
+        <span>Independent design studio</span>
+        <span>Est. 2024 — Worldwide</span>
       </div>
-      <div class="hero-content">
-        <p class="hero-eyebrow">FVLX Studios — Premium web design</p>
-        <h1 class="hero-title">
-          <span class="line">We craft the web's</span>
-          <span class="line">most <span class="blue">beautiful</span></span>
-          <span class="line">experiences.</span>
-        </h1>
-        <p class="hero-sub">Design, engineering and motion — fused into digital products that feel inevitable.</p>
-        <div class="hero-actions">
-          <a href="#cta" class="btn btn-blue">Start a project</a>
-          <a href="#portfolio" class="btn btn-outline">See our work</a>
-        </div>
+      <h1 class="hero-h kinetic">We don't make websites. We make brands <em>impossible</em> to ignore.</h1>
+      <div class="hero-foot mono">
+        <span class="scroll-cue">↓ Scroll</span>
+        <span>Brand · Web · Motion</span>
       </div>
-      <div class="scroll-hint" aria-hidden="true"><span></span>Scroll</div>
     </section>
 
-    <!-- 2. PINNED STORY -->
-    <section class="story" id="story">
-      <div class="story-pin">
-        <p class="story-kicker">How we work</p>
-        <div class="story-stage">
-          <article class="story-card" data-step="0">
-            <span class="story-num">01</span>
-            <h2>Design</h2>
-            <p>We start with the feeling. Every pixel, grid and transition is composed to be effortless, considered and unmistakably premium.</p>
+    <!-- Marquee ticker -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Brand Identity</span><span class="dot">✦</span><span>Art Direction</span><span class="dot">✦</span><span>Web Design</span><span class="dot">✦</span><span>Development</span><span class="dot">✦</span><span>Motion</span><span class="dot">✦</span><span>Strategy</span><span class="dot">✦</span>
+        <span>Brand Identity</span><span class="dot">✦</span><span>Art Direction</span><span class="dot">✦</span><span>Web Design</span><span class="dot">✦</span><span>Development</span><span class="dot">✦</span><span>Motion</span><span class="dot">✦</span><span>Strategy</span><span class="dot">✦</span>
+      </div>
+    </div>
+
+    <!-- 2. MANIFESTO -->
+    <section class="manifesto" id="manifesto">
+      <span class="sec-num mono">(01) — Manifesto</span>
+      <p class="manifesto-text">
+        We believe a brand is either <em>unforgettable</em> or invisible. There's no in-between.
+        We design the kind of work that stops the scroll, earns the double-take, and makes
+        your competitors nervous. <span class="muted">No templates. No filler. No safe.</span>
+      </p>
+    </section>
+
+    <!-- 3. SELECTED WORK -->
+    <section class="work" id="work">
+      <div class="work-head">
+        <span class="sec-num mono">(02) — Selected Work</span>
+        <h2 class="work-title reveal-line">Recent <em>obsessions.</em></h2>
+        <p class="work-hint mono" aria-hidden="true">↔ Drag</p>
+      </div>
+      <div class="gallery-viewport">
+        <div class="gallery">
+          <article class="piece" data-cursor="view">
+            <div class="piece-img g1"><div class="piece-frame"></div></div>
+            <div class="piece-info"><span class="mono">01 / Fashion</span><h3>Maison Noir</h3></div>
           </article>
-          <article class="story-card" data-step="1">
-            <span class="story-num">02</span>
-            <h2>Build</h2>
-            <p>Hand-engineered front-ends that are blisteringly fast, accessible and pixel-perfect across every device and viewport.</p>
+          <article class="piece tall" data-cursor="view">
+            <div class="piece-img g2"><div class="piece-frame"></div></div>
+            <div class="piece-info"><span class="mono">02 / Editorial</span><h3>Paper Cult</h3></div>
           </article>
-          <article class="story-card" data-step="2">
-            <span class="story-num">03</span>
-            <h2>Launch</h2>
-            <p>We ship with confidence — performance budgets, analytics and motion polish — then stay on to help you scale.</p>
+          <article class="piece" data-cursor="view">
+            <div class="piece-img g3"><div class="piece-frame"></div></div>
+            <div class="piece-info"><span class="mono">03 / Hospitality</span><h3>Hotel Saffron</h3></div>
+          </article>
+          <article class="piece tall" data-cursor="view">
+            <div class="piece-img g4"><div class="piece-frame"></div></div>
+            <div class="piece-info"><span class="mono">04 / Tech</span><h3>Vertex</h3></div>
+          </article>
+          <article class="piece" data-cursor="view">
+            <div class="piece-img g5"><div class="piece-frame"></div></div>
+            <div class="piece-info"><span class="mono">05 / Spirits</span><h3>Ember &amp; Oak</h3></div>
+          </article>
+          <article class="piece tall" data-cursor="view">
+            <div class="piece-img g6"><div class="piece-frame"></div></div>
+            <div class="piece-info"><span class="mono">06 / Beauty</span><h3>Lumen</h3></div>
           </article>
         </div>
-        <div class="story-progress" aria-hidden="true">
-          <span class="dot" data-dot="0"></span>
-          <span class="dot" data-dot="1"></span>
-          <span class="dot" data-dot="2"></span>
-        </div>
       </div>
     </section>
 
-    <!-- 3. PORTFOLIO (horizontal scroll) -->
-    <section class="portfolio" id="portfolio">
-      <div class="portfolio-head reveal-up">
-        <h2 class="section-title">Selected work</h2>
-        <div class="filters" role="tablist" aria-label="Portfolio filters">
-          <button class="filter active" data-filter="all">All</button>
-          <button class="filter" data-filter="design">Design</button>
-          <button class="filter" data-filter="dev">Development</button>
-          <button class="filter" data-filter="brand">Branding</button>
-        </div>
-      </div>
-      <p class="swipe-hint" aria-hidden="true">↔ Swipe or drag to explore</p>
-      <div class="port-viewport">
-        <div class="port-track">
-          <a class="proj" data-cat="design" href="#"><div class="proj-img p1"><span class="proj-tag">E-commerce</span><div class="proj-ui"></div></div><div class="proj-meta"><h3>Acme Commerce</h3><p>Design · Web</p></div></a>
-          <a class="proj" data-cat="dev" href="#"><div class="proj-img p2"><span class="proj-tag">SaaS</span><div class="proj-ui"></div></div><div class="proj-meta"><h3>Northwind Cloud</h3><p>Development</p></div></a>
-          <a class="proj" data-cat="brand" href="#"><div class="proj-img p3"><span class="proj-tag">Identity</span><div class="proj-ui"></div></div><div class="proj-meta"><h3>Lumen Studio</h3><p>Branding</p></div></a>
-          <a class="proj" data-cat="design" href="#"><div class="proj-img p4"><span class="proj-tag">Fintech</span><div class="proj-ui"></div></div><div class="proj-meta"><h3>Harbor Pay</h3><p>Design · Web</p></div></a>
-          <a class="proj" data-cat="dev" href="#"><div class="proj-img p5"><span class="proj-tag">Platform</span><div class="proj-ui"></div></div><div class="proj-meta"><h3>Vertex Labs</h3><p>Development</p></div></a>
-          <a class="proj" data-cat="brand" href="#"><div class="proj-img p6"><span class="proj-tag">Launch</span><div class="proj-ui"></div></div><div class="proj-meta"><h3>Nova Field</h3><p>Branding</p></div></a>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4. STATS -->
-    <section class="stats" id="stats">
-      <div class="stat reveal-up">
-        <strong class="count" data-target="120" data-suffix="+">0</strong>
-        <span>Projects delivered</span>
-      </div>
-      <div class="stat reveal-up">
-        <strong class="count" data-target="60" data-suffix="+">0</strong>
-        <span>Happy clients</span>
-      </div>
-      <div class="stat reveal-up">
-        <strong class="count" data-target="98" data-suffix="">0</strong>
-        <span>Avg. Lighthouse score</span>
-      </div>
-      <div class="stat reveal-up">
-        <strong class="count" data-target="12" data-suffix="">0</strong>
-        <span>Design awards</span>
-      </div>
-    </section>
-
-    <!-- 5. SERVICES -->
+    <!-- 4. SERVICES -->
     <section class="services" id="services">
-      <div class="services-head reveal-up">
-        <p class="kicker dark">Capabilities</p>
-        <h2 class="section-title dark">Everything, beautifully built.</h2>
-      </div>
-      <div class="svc-grid">
-        <article class="svc reveal-up"><span class="svc-i">◇</span><h3>Web Design</h3><p>Cinematic, conversion-focused interfaces tailored to your brand.</p></article>
-        <article class="svc reveal-up"><span class="svc-i">◈</span><h3>Development</h3><p>Fast, accessible, hand-coded front-ends built to scale.</p></article>
-        <article class="svc reveal-up"><span class="svc-i">◆</span><h3>Branding</h3><p>Identity systems, type and art direction with real presence.</p></article>
-        <article class="svc reveal-up"><span class="svc-i">▲</span><h3>SEO</h3><p>Technical SEO and performance that put you in front of customers.</p></article>
-        <article class="svc reveal-up"><span class="svc-i">✦</span><h3>AI Integration</h3><p>Smart features and assistants woven natively into your product.</p></article>
-        <article class="svc reveal-up"><span class="svc-i">●</span><h3>Care &amp; Growth</h3><p>Ongoing iteration, analytics and optimisation after launch.</p></article>
-      </div>
+      <span class="sec-num mono">(03) — Services</span>
+      <ul class="svc-list">
+        <li class="svc-row" data-cursor>
+          <span class="svc-no mono">01</span>
+          <h3>Brand Identity</h3>
+          <p class="mono">Logos · Systems · Art direction</p>
+        </li>
+        <li class="svc-row" data-cursor>
+          <span class="svc-no mono">02</span>
+          <h3>Web Design</h3>
+          <p class="mono">Editorial · Interaction · Motion</p>
+        </li>
+        <li class="svc-row" data-cursor>
+          <span class="svc-no mono">03</span>
+          <h3>Development</h3>
+          <p class="mono">Front-end · WebGL · Performance</p>
+        </li>
+        <li class="svc-row" data-cursor>
+          <span class="svc-no mono">04</span>
+          <h3>Strategy</h3>
+          <p class="mono">Positioning · Naming · Voice</p>
+        </li>
+      </ul>
     </section>
 
-    <!-- 6. TESTIMONIALS -->
-    <section class="testimonials" id="testimonials">
-      <h2 class="section-title reveal-up">Loved by ambitious teams.</h2>
-      <div class="tcarousel">
-        <div class="ttrack" id="ttrack">
-          <figure class="tcard"><blockquote>“FVLX delivered the most beautiful product launch we've ever shipped. Conversions jumped 40%.”</blockquote><figcaption><strong>Sarah Lin</strong><span>CEO, Acme</span></figcaption></figure>
-          <figure class="tcard"><blockquote>“The motion and polish are on another level. It genuinely feels like Apple built our site.”</blockquote><figcaption><strong>Marco Reyes</strong><span>Founder, Northwind</span></figcaption></figure>
-          <figure class="tcard"><blockquote>“Fast, thoughtful, and obsessive about detail. Our brand finally matches our ambition.”</blockquote><figcaption><strong>Aisha Khan</strong><span>CMO, Lumen</span></figcaption></figure>
-          <figure class="tcard"><blockquote>“Flawless performance and a design that turns heads. Worth every cent.”</blockquote><figcaption><strong>Tom Beckett</strong><span>VP Product, Vertex</span></figcaption></figure>
-        </div>
-        <div class="tnav">
-          <button class="tbtn" id="tprev" aria-label="Previous">‹</button>
-          <button class="tbtn" id="tnext" aria-label="Next">›</button>
-        </div>
-      </div>
+    <!-- 5. ABOUT -->
+    <section class="about" id="about">
+      <span class="sec-num mono">(04) — About</span>
+      <p class="about-text">
+        We're a small studio with a big mouth. <em>Eight</em> people, zero account managers,
+        an unhealthy obsession with kerning. We work with founders and brands who'd rather be
+        <em>loved</em> than liked — and we ship work that earns it.
+      </p>
     </section>
 
-    <!-- 7. CLOSING CTA -->
-    <section class="closing" id="cta">
-      <div class="aurora" aria-hidden="true"><span class="aurora-blob a1"></span><span class="aurora-blob a2"></span></div>
-      <div class="closing-inner reveal-up">
-        <h2>Let's build something <span class="blue">beautiful.</span></h2>
-        <p>Tell us about your project — we reply within one business day.</p>
-        <a href="mailto:hello@fvlxstudios.com" class="btn btn-blue lg">Start a project</a>
-      </div>
+    <!-- 6. CLOSING CTA -->
+    <section class="contact" id="contact">
+      <span class="sec-num mono center">(05) — Let's talk</span>
+      <h2 class="cta-h reveal-line">Let's make something<br><em>unforgettable.</em></h2>
+      <a class="magnetic cta-btn" href="mailto:hello@fvlxstudio.com" data-cursor><span>Start a project ↘</span></a>
     </section>
   </main>
 
-  <!-- 8. FOOTER -->
+  <!-- 7. FOOTER -->
   <footer class="footer">
-    <div class="footer-top">
-      <img src="assets/fvlx-logo.png" alt="FVLX Studios" class="footer-logo">
-      <nav class="footer-links">
-        <a href="#story">Approach</a>
-        <a href="#portfolio">Work</a>
-        <a href="#services">Services</a>
-        <a href="#cta">Contact</a>
-      </nav>
+    <div class="footer-top mono">
+      <div class="footer-col">
+        <span class="footer-h">Studio</span>
+        <a href="#work" data-cursor>Work</a>
+        <a href="#services" data-cursor>Services</a>
+        <a href="#about" data-cursor>About</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-h">Social</span>
+        <a href="#" data-cursor>Instagram</a>
+        <a href="#" data-cursor>Behance</a>
+        <a href="#" data-cursor>LinkedIn</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-h">Say hello</span>
+        <a href="mailto:hello@fvlxstudio.com" data-cursor>hello@fvlxstudio.com</a>
+      </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; <span id="year"></span> FVLX Studios. All rights reserved.</p>
-      <p>Designed &amp; built in-house.</p>
+    <div class="wordmark" aria-hidden="true">FVLX</div>
+    <div class="footer-bottom mono">
+      <span>&copy; <span id="year"></span> FVLX Studio</span>
+      <span>Made with intent — no templates</span>
     </div>
   </footer>
 
-  <!-- GSAP + ScrollTrigger + Lenis (smooth scroll) -->
+  <!-- GSAP + ScrollTrigger + Lenis -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
